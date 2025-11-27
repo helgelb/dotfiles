@@ -86,14 +86,29 @@ plugins=(
   poetry
 ) 
 
-# Use up/down arrows for history substring search
-bindkey '^[[A' history-substring-search-up
-bindkey '^[[B' history-substring-search-down
+# gh completion
+if command -v gh >/dev/null 2>&1; then
+  eval "$(gh completion -s zsh)"
+fi
 
 source $ZSH/oh-my-zsh.sh
 
-# User configuration
+# Keybindings
+zmodload zsh/terminfo 2>/dev/null || true
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
+bindkey -M emacs '^M' accept-line
+bindkey -M viins '^M' accept-line
+bindkey -M vicmd '^M' accept-line
+bindkey -M isearch '^M' accept-search
+#bindkey -M isearch '\r' accept-search
+#bindkey -M isearch '\n' accept-search
 
+if type fzf >/dev/null 2>&1; then
+  bindkey '^R' fzf-history-widget
+fi
+
+# User configuration
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
@@ -124,10 +139,17 @@ fi
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias ll='ls -alF'
 alias l='ls -CF'
-
 alias gs='git status'
 alias gl='git log --oneline --graph --decorate'
 alias gd='git diff'
+alias gc='git commit -m'
+alias ga='git add .'
+alias gp='git push'
+alias cs='config status'
+alias csu='config status -u'
+alias ca='config add .'
+alias cc='config commit -m'
+alias cp='config push'
 
 # History configuration
 HISTSIZE=50000
