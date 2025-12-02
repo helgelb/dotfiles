@@ -1,0 +1,91 @@
+
+# git ls-files --others --exclude-from=.git/info/exclude
+# Lines that start with '#' are comments.
+
+# Histories or caches
+.zsh_history
+.bash_history
+.viminfo
+.zcompdump*
+.cache/
+
+# Most of ~/.local is binaries, caches, and app state.
+# If you ever want to track something under .local, narrow these further.
+.local/share/
+.local/state/
+.local/lib/
+.local/bin/
+
+# Big tool installs
+.oh-my-zsh/
+.nvm/
+.pyenv/
+.npm/
+.azure/
+.config/gh/
+.config/uv/
+.vscode-server/
+
+# Repo internals (this bare repo itself)
+.dotfiles/
+
+# GPG / SSH secrets
+.gnupg/
+.ssh/
+
+# Shell / pager noise
+.lesshst
+.z
+
+# Oh My Zsh backup file
+.zshrc.pre-oh-my-zsh
+
+# Auto-generated completions
+.zsh-completions/
+
+# Plugin dirs cloned in $HOME
+fast-syntax-highlighting/
+zsh-autosuggestions/
+
+# Binaries and local tools
+lazygit
+
+# Misc system artifacts
+.sudo_as_admin_successful
+.motd_shown
+.landscape/
+
+# Git projects
+projects/
+
+# Sensitive credentials
+.aws/
+.databrickscfg
+.databricks/
+.databricks/token-cache.json
+.docker/config.json
+
+# Copilot CLI logs & state
+.copilot/
+.config/configstore/
+
+# Docker internal files
+.docker/contexts
+.docker/desktop/
+.docker/features.json
+
+# Terraform caches
+.terraform.d/
+
+# IPython, Python history
+.ipython/
+.python_history
+
+# VSCode remote container state
+.vscode-remote-containers/
+
+# Dotnet CRL caches
+.dotnet/
+
+# wget history
+.wget-hsts
