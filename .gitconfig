@@ -3,3 +3,8 @@
 [user]
 	email = helgelb@hotmail.com
 	name = Helge L. Bjerke
+	signingkey = ~/.ssh/id_ed25519.pub
+[gpg]
+	format = ssh
+[commit]
+	gpgsign = true

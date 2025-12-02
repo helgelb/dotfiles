@@ -139,6 +139,7 @@ fi
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias ll='ls -alF'
 alias l='ls -CF'
+alias la='ls -A'
 alias gs='git status'
 alias gl='git log --oneline --graph --decorate'
 alias gd='git diff'
@@ -150,6 +151,11 @@ alias csu='config status -u'
 alias ca='config add .'
 alias cc='config commit -m'
 alias cp='config push'
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+alias cdp='cd ~/projects/'
+alias cls='clear'
 
 # History configuration
 HISTSIZE=50000
