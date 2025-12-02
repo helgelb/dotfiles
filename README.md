@@ -1,11 +1,11 @@
-# Dotfiles (WSL / zsh / Neovim)
+# Dotfiles
 
 This repo manages my shell and editor configuration on WSL:
 
-- zsh + Oh My Zsh
+- zsh (Oh My Zsh)
 - Neovim (LazyVim)
-- git config
-- other CLI tooling
+- git
+- other CLI tools
 
 Managed as a bare repo in `$HOME` using:
 
