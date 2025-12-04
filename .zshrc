@@ -150,7 +150,6 @@ alias cs='config status'
 alias csu='config status -u'
 alias ca='config add .'
 alias cc='config commit -m'
-alias cp='config push'
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
@@ -227,3 +226,5 @@ export NVM_DIR="$HOME/.nvm"
 
 # Dotfiles management (bare repo at ~/.dotfiles)
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
+
+complete -o nospace -C /usr/bin/terraform terraform
