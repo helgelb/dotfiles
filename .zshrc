@@ -101,9 +101,8 @@ bindkey -M emacs '^M' accept-line
 bindkey -M viins '^M' accept-line
 bindkey -M vicmd '^M' accept-line
 bindkey -M isearch '^M' accept-search
-#bindkey -M isearch '\r' accept-search
-#bindkey -M isearch '\n' accept-search
-
+bindkey -M isearch '\r' accept-search
+bindkey -M isearch '\n' accept-search
 if type fzf >/dev/null 2>&1; then
   bindkey '^R' fzf-history-widget
 fi
@@ -112,7 +111,10 @@ fi
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
-# export LANG=en_US.UTF-8
+# export LANG=en_US.UTF-e
+
+# BROWSER='/mnt/c/Program\ Files/Google/Chrome/Application/chrome.exe'
+BROWSER=wslview
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
@@ -139,22 +141,12 @@ fi
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias ll='ls -alF'
 alias l='ls -CF'
-alias la='ls -A'
 alias gs='git status'
 alias gl='git log --oneline --graph --decorate'
 alias gd='git diff'
 alias gc='git commit -m'
 alias ga='git add .'
 alias gp='git push'
-alias cs='config status'
-alias csu='config status -u'
-alias ca='config add .'
-alias cc='config commit -m'
-alias grep='grep --color=auto'
-alias fgrep='fgrep --color=auto'
-alias egrep='egrep --color=auto'
-alias cdp='cd ~/projects/'
-alias cls='clear'
 
 # History configuration
 HISTSIZE=50000
@@ -226,5 +218,4 @@ export NVM_DIR="$HOME/.nvm"
 
 # Dotfiles management (bare repo at ~/.dotfiles)
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
-
-complete -o nospace -C /usr/bin/terraform terraform
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
