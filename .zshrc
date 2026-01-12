@@ -147,6 +147,8 @@ alias gd='git diff'
 alias gc='git commit -m'
 alias ga='git add .'
 alias gp='git push'
+alias cdp='cd ~/projects/'
+alias c='code .'
 
 # History configuration
 HISTSIZE=50000

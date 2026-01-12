@@ -1,0 +1,7 @@
+[DEFAULT]
+host      = https://adb-290321750091624.4.azuredatabricks.net/
+auth_type = databricks-cli
+
+[maia-dev]
+host      = https://adb-3827340847158127.7.azuredatabricks.net/
+auth_type = databricks-cli
