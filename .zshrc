@@ -153,6 +153,7 @@ alias egrep='egrep --color=auto'
 alias ll='ls -alF'
 alias l='ls -CF'
 alias la='la -A'
+alias cls='clear'
 
 # History configuration
 HISTSIZE=50000
