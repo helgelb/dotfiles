@@ -139,8 +139,6 @@ fi
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias ll='ls -alF'
-alias l='ls -CF'
 alias gs='git status'
 alias gl='git log --oneline --graph --decorate'
 alias gd='git diff'
@@ -149,6 +147,12 @@ alias ga='git add .'
 alias gp='git push'
 alias cdp='cd ~/projects/'
 alias c='code .'
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+alias ll='ls -alF'
+alias l='ls -CF'
+alias la='la -A'
 
 # History configuration
 HISTSIZE=50000
@@ -159,6 +163,9 @@ setopt HIST_REDUCE_BLANKS
 setopt SHARE_HISTORY
 setopt APPEND_HISTORY
 setopt INC_APPEND_HISTORY
+
+# Terraform CLI completion
+complete -o nospace -C /usr/bin/terraform terraform
 
 # Azure CLI completion
 autoload -U +X bashcompinit && bashcompinit
@@ -220,4 +227,6 @@ export NVM_DIR="$HOME/.nvm"
 
 # Dotfiles management (bare repo at ~/.dotfiles)
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
+
+# Homebrew
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
